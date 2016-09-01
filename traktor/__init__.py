@@ -8,7 +8,7 @@ from traktor.factory import build, TrackerNotFoundError, ActionNotFoundError
 logging.basicConfig(
     level=logging.DEBUG,
     datefmt='%d.%m.%Y %H:%M:%S',
-    format='[%(asctime)s][%(levelname)-5s] %(message)s'
+    format='[%(asctime)s][%(name)-8s][%(levelname)-5s] %(message)s'
 )
 
 logger = logging.getLogger()
