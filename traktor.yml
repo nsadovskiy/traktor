@@ -1,0 +1,8 @@
+LostFilmRSS:
+  rss: https://www.lostfilm.tv/rssdd.xml
+  torrents:
+    - The Strain 1080p
+    - BrainDead 1080p
+  action:
+    kind: SaveToFolder
+    path: /tmp
