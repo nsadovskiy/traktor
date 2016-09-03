@@ -13,15 +13,13 @@ logging.basicConfig(
 
 logger = logging.getLogger()
 
-SETTINGS_FILE_PATH = '/home/sns/devel/traktor/src/traktor.yml'
 
-
-def run():
+def run(settings_file, library_file):
     try:
         logger.info('Traktor started')
 
-        logger.debug('Trying to read settings from "%s"', SETTINGS_FILE_PATH)
-        with open(SETTINGS_FILE_PATH, 'r') as f:
+        logger.debug('Trying to read settings from "%s"', settings_file)
+        with open(settings_file, 'r') as f:
             tasks = [build(tracker, settings) for tracker, settings in load_yaml(f).items()]
         logger.debug('Setting read completed successfuly')
 
